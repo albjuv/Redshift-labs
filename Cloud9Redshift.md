@@ -151,4 +151,6 @@ Note: if you followed the Immersion Day labs and didn't change the default passw
 
 You can find tips for psql usage [here](http://postgresguide.com/utilities/psql.html)
 
+Or, look for the "Introduction to psql command-line" entry under the "Using SQL" topic [here](http://pg-au.com/training_decks.html).
+
 Note: If your Cloud9 environment goes to sleep (by default after 30 minutes of inactivity), then when you re-launch the Cloud9 environment, it will have a new Public IP address.  As such you may need to repeat the steps in the [Setup network access between Cloud9 and your Redshift cluster](#Setup-network-access-between-Cloud9-and-your-Redshift-cluster) section.
