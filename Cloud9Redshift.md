@@ -18,7 +18,7 @@ AWS Cloud9 comes with a terminal that includes sudo privileges to the managed Am
 
 * Enter "redshift_[your_initials]" for the name.
 
-Note: As multiple users may be using the same account bucket in the labs, please use your initials when creating/naming the environment.
+Note: As multiple users may be using the same account in the labs, please use your initials when creating/naming the environment.
 
 * Fill in a description.
 
@@ -73,7 +73,7 @@ When the code is finished running, you should see output like this:
 
 ## Setup network access between Cloud9 and your Redshift cluster
 
-NOTE: If you are following the Redshift Immersion Day lab and you left the InboundTraffic parameter at its default of 0.0.0.0/0, then you do not need to do this section.
+NOTE: If you are following the Redshift Immersion Day lab and you left the InboundTraffic parameter at its default of 0.0.0.0/0, then you do not need to do this section and jump to the [next section](#Gather-the-endpoint-hostname-of-your-Redshift-cluster).
 
 * While leaving your Cloud9 environment open, navigate to the EC2 Console in a different browser tab.
 
@@ -119,7 +119,7 @@ If following the Immersion Day labs, this information can be found in the Output
 
 ![screen](images/rs2.png)
 
-* Paste the endpoint in the new file
+* Paste the endpoint in the new file (so you have it handy for later)
 
 ![screen](images/rs3.png)
 
@@ -135,7 +135,9 @@ You terminal will look like this:
 
 * Delete the part of the command that says "ENDPOINT-WITHOUT-:5439"
 
-* Go to your new file and copy the hostname part of the endpoint (that is don't copy the :5439 part).
+* Go to your new file and copy just the hostname part of the endpoint (that is don't copy the :5439 part).
+
+![screen](images/rs4a.png)
 
 * Go back to your bash terminal and paste the hostname and run the command
 
@@ -149,3 +151,4 @@ Note: if you followed the Immersion Day labs and didn't change the default passw
 
 You can find tips for psql usage [here](http://postgresguide.com/utilities/psql.html)
 
+Note: If your Cloud9 environment goes to sleep (by default after 30 minutes of inactivity), then when you re-launch the Cloud9 environment, it will have a new Public IP address.  As such you may need to repeat the steps in the [Setup network access between Cloud9 and your Redshift cluster](#Setup-network-access-between-Cloud9-and-your-Redshift-cluster) section.
