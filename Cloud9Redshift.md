@@ -147,5 +147,5 @@ Note: if you followed the Immersion Day labs and didn't change the default passw
 
 ![screen](images/rs6.png)
 
-You can find documentation for psql usage [here](https://www.postgresql.org/docs/8.4/app-psql.html)
+You can find tips for psql usage [here](http://postgresguide.com/utilities/psql.html)
 
