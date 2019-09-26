@@ -129,6 +129,8 @@ If following the Immersion Day labs, this information can be found in the Output
 psql -p 5439 -U awsuser -d dev -h ENDPOINT-WITHOUT-:5439
 ```
 
+You terminal will look like this:
+
 ![screen](images/rs4.png)
 
 * Delete the part of the command that says "ENDPOINT-WITHOUT-:5439"
