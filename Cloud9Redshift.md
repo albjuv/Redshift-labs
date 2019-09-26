@@ -42,9 +42,12 @@ Cloud9 will now create your new environment.  It will take a few minutes for the
 If you are new to Cloud9, review the IDE tutorial at [https://docs.aws.amazon.com/cloud9/latest/user-guide/tutorial-tour-ide.html](https://docs.aws.amazon.com/cloud9/latest/user-guide/tutorial-tour-ide.html)
 
 
-## Configure prerequisites for connecting to Redshift
+## Install psql for connecting to Redshift
 
-Kinesis Data Analytics for Java (KDAJ) is based on Apache Flink 1.6.2.  To build applications for KDAJ, we will need to configure Java, Maven, Apache Flink, and the Flink Connector for Kinesis.  We will do that in the following steps.
+We will use the standard psql client tool from the open source postgres project as a client for Redshift.
+
+You can find psql information [here](https://www.postgresql.org/docs/8.4/app-psql.html).
+
 
 * Open up your Cloud9 environment if not already open
 
