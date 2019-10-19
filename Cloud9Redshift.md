@@ -60,6 +60,7 @@ You can find psql information [here](https://www.postgresql.org/docs/8.4/app-psq
 * In the terminal, paste and run the following code to setup the boto3 and java 1.8 environment.
 
 ```
+git clone https://github.com/awslabs/amazon-redshift-utils.git
 sudo yum -y update
 sudo yum -y install postgresql postgresql-devel postgresql-contrib
 
@@ -143,6 +144,8 @@ You terminal will look like this:
 
 ![screen](images/rs5.png)
 
+Note: If you are not able to connect (the command hangs then eventually times out), you may need to use the Private IP address of the Cloud9 EC2 instance in your Redshift Cluster Security Group inbound rule (as compared to using the Public IP address).  This can happen if your VPC is such that the Cloud9 EC2 subnet is setup to route locally to the Redshift cluster's subnet, rather than via an Internet Gateway.
+
 * Enter the password and have fun.
 
 Note: if you followed the Immersion Day labs and didn't change the default password in the CloudFormation template, then the awsuser password will default to Awsuser123
@@ -152,5 +155,21 @@ Note: if you followed the Immersion Day labs and didn't change the default passw
 You can find tips for psql usage [here](http://postgresguide.com/utilities/psql.html)
 
 Or, look for the "Introduction to psql command-line" entry under the "Using SQL" topic [here](http://pg-au.com/training_decks.html).
+
+Here are some example commands you can run inside psql:
+
+```
+CREATE TABLE hello_world   (id int, fname varchar(30));
+\timing
+\l
+\dn
+\d
+\dt hello_world
+\cd /home/ec2-user/environment/amazon-redshift-utils/src/AdminScripts/
+\i top_queries.sql
+\q
+
+```
+
 
 Note: If your Cloud9 environment goes to sleep (by default after 30 minutes of inactivity), then when you re-launch the Cloud9 environment, it will have a new Public IP address.  As such you may need to repeat the steps in the [Setup network access between Cloud9 and your Redshift cluster](#Setup-network-access-between-Cloud9-and-your-Redshift-cluster) section.
